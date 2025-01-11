@@ -11,7 +11,7 @@ interface ITag {
 }
 
 async function fetchTags(): Promise<ITag[]> {
-  const response = await fetch('http://localhost:5182/api/Tag/GetAllTags');
+  const response = await fetch('https://student-artifact-exchange-service.onrender.com/api/Tag/GetAllTags');
   if (!response.ok) {
     throw new Error('Failed to fetch tags');
   }

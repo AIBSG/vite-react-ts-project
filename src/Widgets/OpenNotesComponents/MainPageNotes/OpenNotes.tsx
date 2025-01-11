@@ -31,8 +31,8 @@ interface OpenNotesTagProps {
 const fetchNotes = async (selectedTag: string): Promise<INote[]> => {
   const url =
     selectedTag === "Все"
-      ? "http://localhost:5182/api/Note/GetOpenNotes"
-      : `http://localhost:5182/api/Note/OpenNotesByTags?tagNames=${selectedTag}`;
+      ? "https://student-artifact-exchange-service.onrender.com/api/Note/GetOpenNotes"
+      : `https://student-artifact-exchange-service.onrender.com/api/Note/OpenNotesByTags?tagNames=${selectedTag}`;
 
   const response = await fetch(url);
   const result = await response.json();

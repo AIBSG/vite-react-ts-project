@@ -33,8 +33,8 @@ interface MyNotesTagProps {
 const fetchMyNotes = async (selectedTag: string): Promise<MyNote[]> => {
   const url =
     selectedTag === "Все"
-      ? "http://localhost:5182/api/Note/GetAllNotesByUser"
-      : `http://localhost:5182/api/Note/UserNotesByTags?tagNames=${selectedTag}`;
+      ? "https://student-artifact-exchange-service.onrender.com/api/Note/GetAllNotesByUser"
+      : `https://student-artifact-exchange-service.onrender.com/api/Note/UserNotesByTags?tagNames=${selectedTag}`;
 
   const response = await fetch(url);
   const result = await response.json();

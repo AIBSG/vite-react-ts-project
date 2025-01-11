@@ -33,8 +33,8 @@ interface MyFilesTagProps {
 const fetchMyFiles = async (selectedTag: string): Promise<MyFile[]> => {
   const url =
     selectedTag === "Все"
-      ? "http://localhost:5182/api/Document/GetUserDocuments"
-      : `http://localhost:5182/api/Document/UserDocumentsByTags?tagNames=${selectedTag}`;
+      ? "https://student-artifact-exchange-service.onrender.com/api/Document/GetUserDocuments"
+      : `https://student-artifact-exchange-service.onrender.com/api/Document/UserDocumentsByTags?tagNames=${selectedTag}`;
 
   const response = await fetch(url);
   const result = await response.json();

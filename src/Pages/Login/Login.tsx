@@ -19,7 +19,7 @@ interface DecodedToken {
 }
 
 const loginUser = async (data: LoginRequest): Promise<LoginResponse> => {
-  const response = await fetch("http://localhost:5182/api/User/Login", {
+  const response = await fetch("https://student-artifact-exchange-service.onrender.com/api/User/Login", {
     method: "POST",
     headers: {
       Accept: "application/json",

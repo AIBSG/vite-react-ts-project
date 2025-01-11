@@ -20,7 +20,7 @@ interface DecodedToken {
 }
 
 const registerUser = async (data: RegisterRequest): Promise<RegisterResponse> => {
-  const response = await fetch("http://localhost:5182/api/User/Register", {
+  const response = await fetch("https://student-artifact-exchange-service.onrender.com/api/User/Register", {
     method: "POST",
     headers: {
       Accept: "application/json",

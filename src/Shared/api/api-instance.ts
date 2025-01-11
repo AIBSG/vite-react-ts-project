@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5182";
+const BASE_URL = "https://student-artifact-exchange-service.onrender.com/";
 
 class ApiError extends Error {
   constructor(public response: Response) {
